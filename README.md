@@ -1,4 +1,4 @@
-# `locate_route`
+# locate_route
 
 A command line tool to get location information for the `traceroute` hops.
 
@@ -70,5 +70,43 @@ Zip: 400070, Coordinates: 19.076000,72.877701
 30  * * *
 ```
 
+## How does it work ?
+
+`locate_route` parses the output from traceroute to find all the ip addresses and then
+uses the API provided by https://ipstack.com/ to determine the location.
+
+## Build and Install
+
+1. `git clone https://github.com/junaidrahim/locate-route`
+2. `mkdir build && cd build`
+3. `cmake ..`
+4. `make`
+
+The binary `locate_route` will compile in the `build/` directory. You can run it from there,
+or copy it into `/usr/local/bin` to access it from anywhere on your terminal.
+
+I am working on publishing this as a snap package. 
+
+## Dependencies
+
+C++17 and CMake 3.15
+
+* [argh](https://github.com/adishavit/argh) for setting up the CLI
+* [cpp-httplib](https://github.com/yhirose/cpp-httplib) for http requests
+* [nlohmann/json](https://github.com/nlohmann/json) for parsing JSON
+
+## LICENSE
+Copyright (c) **Junaid Rahim**. All rights reserved.
+
+Licensed under the [MIT](LICENSE) License
+
+<br>
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c-plus-plus.svg)](https://forthebadge.com)
 
 
+
+
+
+
+ 
