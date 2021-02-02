@@ -17,8 +17,9 @@ private:
 
 	int output_position = 0;
 	bool read_complete = false;
-public:
+	void process_output(const std::string& traceroute_line) const;
 
+public:
 	TracerouteRunner(const std::string& net_addr);
 	void fetch_results();
 	void print_output();
