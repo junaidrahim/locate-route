@@ -17,6 +17,8 @@ TracerouteRunner::TracerouteRunner(const std::string &net_addr) {
 	this->network_address = net_addr;
 }
 
+// Run the traceroute command, fetch the results and push it in this->results
+// Lock and Unlock the mutex while writing
 void TracerouteRunner::fetch_results() {
 	std::array<char, 1024> buffer {};
 	const std::string cmd = "traceroute " + this->network_address;
@@ -35,14 +37,10 @@ void TracerouteRunner::fetch_results() {
 	this->read_complete = true;
 }
 
-
-std::string TracerouteRunner::get_output_line() {
-	return this->results.at(this->output_position++);
-}
-
-
+// Parallely process items as they come in from this->results until reads are complete,
+// Once reads are done, process all the remaining results
 void TracerouteRunner::print_output() {
-	while(!read_complete) {
+	while(!this->read_complete) {
 		if(this->output_position < this->results.size()) {
 			this->process_output(this->get_output_line());
 		}
@@ -53,6 +51,18 @@ void TracerouteRunner::print_output() {
 	}
 }
 
+// Lock, Get a line of results from this->results, Unlock
+std::string TracerouteRunner::get_output_line() {
+	try {
+		std::lock_guard<std::mutex> lock(this->mutex_results);
+		return this->results.at(this->output_position++);
+	} catch (const std::out_of_range& err) {
+		std::cerr << "Out of Range Error: " << err.what() << std::endl;
+		exit(1);
+	}
+}
+
+// Process a line of traceroute output by fetching the location
 void TracerouteRunner::process_output(const std::string &traceroute_line) const {
 	if (this->output_position<=2) {
 		std::cout << traceroute_line << std::endl;

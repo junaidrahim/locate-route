@@ -12,6 +12,7 @@
 
 #define CPPHTTPLIB_OPENSSL_SUPPORT
 
+// Make a request to the API and get the location data
 std::string Location::get_location(const std::string &ip_addr) {
 	httplib::Client client("http://api.ipstack.com");
 	std::string address = "/" + ip_addr + "?access_key=" + Location::ipStackAccessKey;
@@ -21,13 +22,20 @@ std::string Location::get_location(const std::string &ip_addr) {
 			std::string rs = res->body;
 			auto response = nlohmann::json::parse(rs);
 
-			std::string continent = response.at("continent_name");
-			std::string country = response.at("country_name");
-			std::string region_name = response.at("region_name");
-			std::string city = response.at("city");
-			std::string zip = response.at("zip");
-			float latitude = response.at("latitude");
-			float longitude = response.at("longitude");
+			std::string continent, country, region_name, city, zip;
+			float latitude, longitude;
+
+			try {
+				continent = response.at("continent_name");
+				country = response.at("country_name");
+				region_name = response.at("region_name");
+				city = response.at("city");
+				zip = response.at("zip");
+				latitude = response.at("latitude");
+				longitude = response.at("longitude");
+			} catch (...) {
+				// do nothing, let the particular string be empty
+			}
 
 			std::string result;
 			result += "Location: ";
@@ -48,6 +56,7 @@ std::string Location::get_location(const std::string &ip_addr) {
 	return "Cannot Determine Location";
 }
 
+// Return the IP addresses from a line of traceroute output
 std::string Location::parse(const std::string &traceroute_line) {
 	// Sample : 3  1-144-31-103.dnainfotel.com (103.31.144.1)  10.949 ms  13.858 ms  13.010 ms
 

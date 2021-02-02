@@ -11,14 +11,13 @@
 
 class TracerouteRunner {
 private:
-	std::vector<std::string> results;
-	std::mutex mutex_results;
-	std::string network_address;
+	std::vector<std::string> results; // holds the output lines from running traceroute
+	std::mutex mutex_results; // to sync R&W between the threads
+	std::string network_address; // ip address passed
 
 	int output_position = 0;
 	bool read_complete = false;
 	void process_output(const std::string& traceroute_line) const;
-
 public:
 	TracerouteRunner(const std::string& net_addr);
 	void fetch_results();
