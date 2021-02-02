@@ -40,8 +40,8 @@ std::string Location::get_location(const std::string &ip_addr) {
 			std::string result;
 			result += "Location: ";
 			result += city + ", ";
-			result += country + ", ";
 			result += region_name + ", ";
+			result += country + ", ";
 			result += continent + "\n";
 			result += "Zip: " + zip;
 			result += ", Coordinates: " + std::to_string(latitude) + "," + std::to_string(longitude) + "\n";

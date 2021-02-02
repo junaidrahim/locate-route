@@ -8,44 +8,42 @@ NOTE: Make sure you have `traceroute` already installed
 
 ```bash
 $ locate_route github.com
-traceroute to github.com (13.234.210.38), 30 hops max, 60 byte packets
+traceroute to github.com (13.234.176.102), 30 hops max, 60 byte packets
 
- 1  _gateway (192.168.0.1)  1.524 ms  3.033 ms  3.016 ms
+ 1  _gateway (192.168.0.1)  0.956 ms  3.018 ms  3.002 ms
 
- 2  4-144-31-103.dnainfotel.com (103.31.144.4)  3.000 ms  2.985 ms  2.970 ms
-Location: Virār, India, Maharashtra, Asia
+ 2  4-144-31-103.dnainfotel.com (103.31.144.4)  2.986 ms  2.971 ms  2.956 ms
+Location: Virār, Maharashtra, India, Asia
 Zip: 401303, Coordinates: 19.466700,72.800003
 
- 3  1-144-31-103.dnainfotel.com (103.31.144.1)  4.028 ms  3.734 ms  3.999 ms
-Location: Virār, India, Maharashtra, Asia
+ 3  1-144-31-103.dnainfotel.com (103.31.144.1)  5.119 ms  5.493 ms  5.473 ms
+Location: Virār, Maharashtra, India, Asia
 Zip: 401303, Coordinates: 19.466700,72.800003
 
- 4  26-69-245-103.dnainfotel.com (103.245.69.26)  7.113 ms  6.550 ms  7.489 ms
-Location: Saint Thomas Mount, India, Tamil Nadu, Asia
+ 4  26-69-245-103.dnainfotel.com (103.245.69.26)  7.137 ms  7.850 ms  7.460 ms
+Location: Saint Thomas Mount, Tamil Nadu, India, Asia
 Zip: 600001, Coordinates: 13.052400,80.250801
 
- 5  52.46.166.32 (52.46.166.32)  5.572 ms  5.557 ms  5.209 ms
-Location: Ashburn, United States, Virginia, North America
+ 5  52.46.166.32 (52.46.166.32)  5.264 ms  5.249 ms  5.234 ms
+Location: Ashburn, Virginia, United States, North America
 Zip: 20147, Coordinates: 39.043701,-77.474197
 
- 6  52.95.67.44 (52.95.67.44)  7.025 ms 52.95.67.22 (52.95.67.22)  6.164 ms 52.95.67.132 (52.95.67.132)  5.977 ms
-Location: Powai, India, Maharashtra, Asia
+ 6  52.95.67.132 (52.95.67.132)  6.218 ms 52.95.67.0 (52.95.67.0)  5.425 ms 52.95.67.66 (52.95.67.66)  8.803 ms
+Cannot Determine Location
+ 7  52.95.64.200 (52.95.64.200)  8.258 ms 52.95.64.194 (52.95.64.194)  7.728 ms 52.95.64.248 (52.95.64.248)  14.031 ms
+Location: Powai, Maharashtra, India, Asia
 Zip: 400070, Coordinates: 19.076000,72.877701
 
- 7  52.95.64.202 (52.95.64.202)  5.467 ms 52.95.64.192 (52.95.64.192)  5.451 ms 52.95.64.234 (52.95.64.234)  15.853 ms
-Location: Powai, India, Maharashtra, Asia
+ 8  52.95.64.243 (52.95.64.243)  9.400 ms 52.95.64.223 (52.95.64.223)  19.349 ms 52.95.64.225 (52.95.64.225)  8.690 ms
+Location: Powai, Maharashtra, India, Asia
 Zip: 400070, Coordinates: 19.076000,72.877701
 
- 8  52.95.64.235 (52.95.64.235)  5.890 ms 52.95.64.215 (52.95.64.215)  29.960 ms 52.95.64.247 (52.95.64.247)  29.945 ms
-Location: Powai, India, Maharashtra, Asia
+ 9  52.95.67.61 (52.95.67.61)  40.869 ms 52.95.67.17 (52.95.67.17)  40.855 ms 52.95.67.149 (52.95.67.149)  40.839 ms
+Location: Powai, Maharashtra, India, Asia
 Zip: 400070, Coordinates: 19.076000,72.877701
 
- 9  52.95.67.131 (52.95.67.131)  5.377 ms 52.95.67.153 (52.95.67.153)  5.362 ms  5.348 ms
-Location: Powai, India, Maharashtra, Asia
-Zip: 400070, Coordinates: 19.076000,72.877701
-
-10  52.95.67.210 (52.95.67.210)  5.333 ms 52.95.65.151 (52.95.65.151)  5.319 ms 52.95.67.214 (52.95.67.214)  5.305 ms
-Location: Powai, India, Maharashtra, Asia
+10  52.95.65.135 (52.95.65.135)  9.313 ms 52.95.67.182 (52.95.67.182)  13.609 ms 52.95.65.135 (52.95.65.135)  9.285 ms
+Location: Powai, Maharashtra, India, Asia
 Zip: 400070, Coordinates: 19.076000,72.877701
 
 11  * * *
