@@ -1,6 +1,6 @@
 # locate_route
 
-A command line tool to grab the geographical location from the `traceroute` hops. 
+A command line tool to grab the geographical location of the hops from `traceroute`. It's like `traceroute`, but also returns the actual location of the IP address. 
 
 ## Installation
 
