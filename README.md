@@ -8,7 +8,7 @@ Make sure you have `g++`, `cmake`, `make` and `traceroute` installed and setup o
 
 Run the following to install the binary:
 
-```
+```bash
 curl https://raw.githubusercontent.com/junaidrahim/locate-route/main/install.sh | sudo bash
 ```
 
