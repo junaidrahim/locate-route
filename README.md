@@ -2,6 +2,29 @@
 
 A command line tool to get location information for the `traceroute` hops.
 
+## Installation
+
+Make sure you have `g++`, `cmake`, `make` and `traceroute` installed and setup on your machine.
+
+Run the following to install the binary:
+
+```
+curl https://raw.githubusercontent.com/junaidrahim/locate-route/main/install.sh | sudo bash
+```
+
+You can run `locate_route` in your shell now.
+
+## Build from Source
+
+1. `git clone https://github.com/junaidrahim/locate-route`
+2. `mkdir build && cd build`
+3. `cmake ..`
+4. `make`
+
+The binary `locate_route` will compile in the `build/` directory. You can run it from there,
+or copy it into `$PATH` to access it from anywhere in your terminal.
+
+
 ## Usage
 
 NOTE: Make sure you have `traceroute` already installed
@@ -74,26 +97,6 @@ Zip: 400070, Coordinates: 19.076000,72.877701
 
 `locate_route` parses the output from traceroute to find all the ip addresses and then
 uses the API provided by https://ipstack.com/ to determine the location.
-
-## Installation
-
-Make sure you have `g++`, `cmake` and `make` installed and setup on your machine.
-
-Run the following to install the binary:
-
-```
-curl x | sudo bash
-```
-
-## Build from Source
-
-1. `git clone https://github.com/junaidrahim/locate-route`
-2. `mkdir build && cd build`
-3. `cmake ..`
-4. `make`
-
-The binary `locate_route` will compile in the `build/` directory. You can run it from there,
-or copy it into `/usr/bin` to access it from anywhere on your terminal.
 
 ## Dependencies
 
