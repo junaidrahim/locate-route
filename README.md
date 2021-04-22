@@ -29,7 +29,7 @@ or copy it into `$PATH` to access it from anywhere in your terminal.
 
 NOTE: Make sure you have `traceroute` already installed
 
-```bash
+```sh-session
 $ locate_route github.com
 traceroute to github.com (13.234.176.102), 30 hops max, 60 byte packets
 
