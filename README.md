@@ -4,12 +4,12 @@ A command line tool to get location information for the `traceroute` hops.
 
 ## Installation
 
-Make sure you have `g++`, `cmake`, `make` and `traceroute` installed and setup on your machine.
+Make sure you have `g++`, `curl` `cmake`, `make` and `traceroute` installed and setup on your machine.
 
 Run the following to install the binary:
 
 ```bash
-curl https://raw.githubusercontent.com/junaidrahim/locate-route/main/install.sh | sudo bash
+curl -o- https://raw.githubusercontent.com/junaidrahim/locate-route/main/install.sh | sudo bash
 ```
 
 You can run `locate_route` in your shell now.
