@@ -75,7 +75,17 @@ Zip: 400070, Coordinates: 19.076000,72.877701
 `locate_route` parses the output from traceroute to find all the ip addresses and then
 uses the API provided by https://ipstack.com/ to determine the location.
 
-## Build and Install
+## Installation
+
+Make sure you have `g++`, `cmake` and `make` installed and setup on your machine.
+
+Run the following to install the binary:
+
+```
+curl x | sudo bash
+```
+
+## Build from Source
 
 1. `git clone https://github.com/junaidrahim/locate-route`
 2. `mkdir build && cd build`
@@ -83,9 +93,7 @@ uses the API provided by https://ipstack.com/ to determine the location.
 4. `make`
 
 The binary `locate_route` will compile in the `build/` directory. You can run it from there,
-or copy it into `/usr/local/bin` to access it from anywhere on your terminal.
-
-I am working on publishing this as a snap package. 
+or copy it into `/usr/bin` to access it from anywhere on your terminal.
 
 ## Dependencies
 
@@ -103,10 +111,4 @@ Licensed under the [MIT](LICENSE) License
 <br>
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-c-plus-plus.svg)](https://forthebadge.com)
-
-
-
-
-
-
  
