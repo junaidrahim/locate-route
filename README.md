@@ -27,7 +27,15 @@ or copy it into `$PATH` to access it from anywhere in your terminal.
 
 ## Usage
 
-NOTE: Make sure you have `traceroute` already installed
+```sh-session
+$ locate_route --help
+locateroute - Get location information of the traceroute hops
+
+USAGE:
+	 locateroute [ip or domain name]
+FLAGS:
+	 -h, --help  Display Help
+```
 
 ```sh-session
 $ locate_route github.com
@@ -76,21 +84,6 @@ Zip: 400070, Coordinates: 19.076000,72.877701
 13  * * *
 14  * * *
 15  * * *
-16  * * *
-17  * * *
-18  * * *
-19  * * *
-20  * * *
-21  * * *
-22  * * *
-23  * * *
-24  * * *
-25  * * *
-26  * * *
-27  * * *
-28  * * *
-29  * * *
-30  * * *
 ```
 
 ## How does it work ?
